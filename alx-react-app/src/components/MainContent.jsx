@@ -1,4 +1,4 @@
-const MainComponent = () => {
+const MainContent = () => {
     return (
     <>
         <main>
@@ -8,4 +8,4 @@ const MainComponent = () => {
     );
 };
 
-export default MainComponent;
+export default MainContent;
