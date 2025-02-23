@@ -5,7 +5,7 @@ import MainContent from './components/MainContent'
 import UserProfile from './components/UserProfile'
 import { useState } from 'react'
 import ProfilePage from './components/ProfilePage'
-import UserContext from './components/UserContext'
+import UserContext from './UserContext'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -21,7 +21,7 @@ function App() {
         <WelcomeMessage />
         <Header />
         <MainContent />
-        <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+        {/* <UserProfile name="Alice" age="25" bio="Loves hiking and photography" /> */}
         <UserContext.Provider value={userData}>
           <ProfilePage />
         </UserContext.Provider>
