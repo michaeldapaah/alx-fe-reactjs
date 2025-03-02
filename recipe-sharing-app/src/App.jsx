@@ -5,7 +5,7 @@ import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <div>
         <h1>Recipe Sharing App</h1>
         <AddRecipeForm />
@@ -14,7 +14,7 @@ function App() {
           <Route path="/recipe/:id" element={<RecipeDetails />} />
         </Routes>
       </div>
-    </Router>
+
   );
 }
 
