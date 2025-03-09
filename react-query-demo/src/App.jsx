@@ -1,4 +1,5 @@
-import ReactQueryDemo from "./components/ReactQueryDemo";
+import PostsComponents from "./components/ReactQueryDemo";
+
 
 function App() {
   return (
