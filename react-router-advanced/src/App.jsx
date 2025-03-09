@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import BlogPost from "./components/BlogPost"; 
 import Profile from "./components/pages/Profile";
 import Login from "./components/pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -21,6 +22,7 @@ function App() {
 
         />
         <Route path="/user/:userId" element={<UserProfile />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );
