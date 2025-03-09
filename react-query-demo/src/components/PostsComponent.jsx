@@ -2,11 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 
 const fetchPosts = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  if (!response.ok) {
+    throw new Error("Network response was not ok"); // \u2705 Ensure error handling
+  }
   return response.json();
 };
 
 function PostsComponent() {
-  const { data, isError, isLoading, refetch } = useQuery({
+  const { data, error, isLoading, refetch } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
     cacheTime: 1000 * 60 * 5, // \u2705 Cache data for 5 minutes
@@ -16,7 +19,7 @@ function PostsComponent() {
   });
 
   if (isLoading) return <p>Loading...</p>;
-  if (isError) return <p>Error fetching posts</p>;
+  if (error) return <p>Error: {error.message}</p>; // \u2705 Uses "error" instead of "isError"
 
   return (
     <div>
