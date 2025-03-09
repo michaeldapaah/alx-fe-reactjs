@@ -5,14 +5,14 @@ const fetchPosts = async () => {
   return response.json();
 };
 
-function PostsComponent() { // \u2705 Rename component to match App.jsx
-  const { data, error, isLoading, refetch } = useQuery({
+function PostsComponent() {
+  const { data, isError, isLoading, refetch } = useQuery({
     queryKey: ["posts"],
     queryFn: fetchPosts,
   });
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (isError) return <p>Error fetching posts</p>;  // \u2705 Change "error" to "isError"
 
   return (
     <div>
@@ -27,4 +27,4 @@ function PostsComponent() { // \u2705 Rename component to match App.jsx
   );
 }
 
-export default PostsComponent; // \u2705 Ensure export matches the import in App.jsx
+export default PostsComponent;
