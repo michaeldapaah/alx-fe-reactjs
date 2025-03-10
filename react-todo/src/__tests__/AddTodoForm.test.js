@@ -3,14 +3,14 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import AddTodoForm from "../components/AddTodoForm";
 
 test("adds a new todo", () => {
-  const mockAddTodo = jest.fn();
-  render(<AddTodoForm onAddTodo={mockAddTodo} />);
+  const mockAdd = jest.fn();
+  render(<AddTodoForm onAdd={mockAdd} />);
 
-  const input = screen.getByPlaceholderText("Add a todo...");
+  const input = screen.getByPlaceholderText("Add a new todo");
   fireEvent.change(input, { target: { value: "New Todo" } });
 
   const addButton = screen.getByText("Add");
   fireEvent.click(addButton);
 
-  expect(mockAddTodo).toHaveBeenCalledWith("New Todo");
+  expect(mockAdd).toHaveBeenCalledWith("New Todo");
 });
