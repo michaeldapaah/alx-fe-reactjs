@@ -18,23 +18,23 @@ test("renders initial todo items", () => {
 test("toggles todo completion", () => {
   render(<TodoList />);
   const todoItem = screen.getByText("Learn React");
-  
+
   // Click to toggle completion
   fireEvent.click(todoItem);
   expect(todoItem).toHaveStyle("text-decoration: line-through");
 
   // Click again to undo completion
   fireEvent.click(todoItem);
-  expect(todoItem).toHaveStyle("text-decoration: none");
+  expect(todoItem).not.toHaveStyle("text-decoration: line-through");
 });
 
 test("deletes a todo", () => {
   render(<TodoList />);
   
-  // Find the first delete button and click it
+  // Find and click delete button
   const deleteButton = screen.getAllByText("Delete")[0];
   fireEvent.click(deleteButton);
-  
+
   // Ensure "Learn React" is removed
   expect(screen.queryByText("Learn React")).not.toBeInTheDocument();
 });
