@@ -12,6 +12,7 @@ describe('TodoList Component', () => {
 
   test('adds a new todo', () => {
     render(<TodoList />);
+
     const input = screen.getByPlaceholderText('Add a new todo');
     const addButton = screen.getByText('Add');
 
@@ -34,10 +35,9 @@ describe('TodoList Component', () => {
 
   test('deletes a todo', () => {
     render(<TodoList />);
-    const deleteButton = screen.getAllByText('Delete')[0];
-    const todoText = screen.getByText('Learn React');
+    const deleteButtons = screen.getAllByText('Delete');
 
-    fireEvent.click(deleteButton);
-    expect(todoText).not.toBeInTheDocument();
+    fireEvent.click(deleteButtons[0]);
+    expect(screen.queryByText('Learn React')).not.toBeInTheDocument();
   });
 });
