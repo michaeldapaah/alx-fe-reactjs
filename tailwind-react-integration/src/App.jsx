@@ -1,3 +1,4 @@
+import UserProfile from "./components/UserProfile"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <p>hello world</p>
+      <UserProfile />
     </div>
   )
 }
