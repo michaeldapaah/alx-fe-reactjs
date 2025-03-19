@@ -23,7 +23,7 @@ return (
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">
             Recipe Sharing Platform
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 shadow-lg">
             {recipes.map((recipe) => (
                 <div
                 key={recipe.id}
