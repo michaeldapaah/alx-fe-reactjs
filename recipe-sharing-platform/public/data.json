@@ -1,21 +1,26 @@
-[
+
+{
+  "recipes": [
     {
       "id": 1,
-      "title": "Spaghetti Carbonara",
-      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-      "image": "./vite.svg"
+      "name": "Spaghetti Bolognese",
+      "image": "./vite.svg",
+      "ingredients": ["Spaghetti", "Minced Meat", "Tomato Sauce", "Garlic", "Onion"],
+      "instructions": "Boil spaghetti. Cook meat. Mix with sauce."
     },
     {
       "id": 2,
-      "title": "Chicken Tikka Masala",
-      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-      "image": "./vite.svg"
+      "name": "Chicken Curry",
+      "image": "./vite.svg",
+      "ingredients": ["Chicken", "Curry Powder", "Coconut Milk", "Onion", "Garlic"],
+      "instructions": "Cook chicken with spices. Add coconut milk. Simmer."
     },
     {
-      "id": 3,
-      "title": "Avocado Toast",
-      "summary": "Healthy and delicious avocado toast topped with fresh tomatoes and feta cheese.",
-      "image": "./vite.svg"
- 
+      "id": 2,
+      "name": "Avocado spice",
+      "image": "./vite.svg",
+      "ingredients": ["Chicken", "Curry Powder", "Coconut Milk", "Onion", "Garlic"],
+      "instructions": "Cook chicken with spices. Add coconut milk. Simmer."
     }
   ]
+}
