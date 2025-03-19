@@ -1,7 +1,7 @@
 function UserProfile(){
     return (
         <div>
-            <button class="text-blue-500">click me</button>
+            <button className="text-blue-500">click me</button>
         </div>
     )
 }
