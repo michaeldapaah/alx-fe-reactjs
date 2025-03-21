@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; // \u2705 Fix: Correct import
+import AddRecipeForm from "./AddRecipeForm";
 
 const HomePage = () => {
     const [recipes, setRecipes] = useState([]);
@@ -17,11 +18,16 @@ const HomePage = () => {
             .catch((error) => console.error("Error loading recipes", error));
     }, []);
 
+    const handleAddRecipe = (newRecipe) => {
+    setRecipes((prevRecipes) => [...prevRecipes, newRecipe]);
+    }
+
     return (
         <div className="min-h-screen bg-gray-100 p-6">
             <h1 className="text-3xl font-bold text-center mb-6 text-gray-900">
                 Recipe Sharing Platform
             </h1>
+            <AddRecipeForm onAddRecipe={handleAddRecipe} />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {recipes.map((recipe, index) => (
                     <div
