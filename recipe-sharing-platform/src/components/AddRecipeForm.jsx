@@ -27,11 +27,11 @@ const AddRecipeForm = ({ onAddRecipe }) => {
       title,
       ingredients: ingredients.split(",").map((item) => item.trim()), // Convert to array
       steps,
-      image: "https://via.placeholder.com/150", // Placeholder image
+      image: "https://via.placeholder.com/150", 
     };
 
     onAddRecipe(newRecipe);
-    setTitle(""); // Clear form fields
+    setTitle("");
     setIngredients("");
     setSteps("");
     setErrors({});

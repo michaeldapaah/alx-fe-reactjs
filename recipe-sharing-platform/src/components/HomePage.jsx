@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // \u2705 Fix: Correct import
+import { Link } from "react-router-dom"; 
 import AddRecipeForm from "./AddRecipeForm";
 
 const HomePage = () => {
@@ -36,7 +36,7 @@ const HomePage = () => {
                     >
                         <img
                             src={recipe.image}
-                            alt={recipe.name} // \u2705 Fix: Ensure correct property name
+                            alt={recipe.name} 
                             className="w-full h-48 object-cover rounded-md"
                         />
                         <h2 className="text-xl font-semibold mt-3">{recipe.name}</h2> 
