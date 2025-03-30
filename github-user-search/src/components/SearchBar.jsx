@@ -7,6 +7,7 @@ function SearchBar({ onSearch }) {
     e.preventDefault();
     if (username.trim()) {
       onSearch(username);
+      setUsername(""); // Clear input after search
     }
   };
 
